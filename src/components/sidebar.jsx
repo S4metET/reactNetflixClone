@@ -8,6 +8,7 @@ import profileImage from "../image/user.svg"
 const Sidebar = () => {
     return (
         <header  className=" flex justify-between bg-[#161D2F] px-3 py-5 mb-6">
+
             <div>
                 <a href=""><MdMovie className="w-[25px] h-[20px] text-[#FC4747] " /></a>
             </div>
