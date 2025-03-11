@@ -1,9 +1,28 @@
+import { useState } from "react";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
+import { CiBookmark, CiBookmarkCheck } from "react-icons/ci";
+
+const Trending = ({ addBookmark }) => {
+    const [saved, setSaved] = useState(false);
+
+    const handleBookmarkClick = () => {
+        setSaved(!saved);
+        const movie = {
+            title: "Beyond Earth",
+            year: "2019",
+            genre: "Movie",
+            rating: "PG"
+        };
+        
+        if (!saved) {
+            addBookmark(movie);
+        } else {
+            console.log("Beyond Earth kayıttan kaldırıldı!");
+        }
+    };
 import { CiBookmark } from "react-icons/ci";
 import img from "../image/Rectangle.png"
-
-const Trending = () => {
     return (
         <div className="px-4" >
             <div className="mb-4" >
@@ -26,6 +45,27 @@ const Trending = () => {
               <TbMovie />
               <p>Movie</p>
             </div>
+            <div>
+                <img src="" alt="" />
+                <div>
+                    <h3>Beyond Earth</h3>
+                </div>
+                <div>
+                    <p>2019</p>
+                    <FaCircle />
+                    <TbMovie />
+                    <p>Movie</p>
+                </div>
+                <div>
+                    <h1>PG</h1>
+                </div>
+                <div onClick={handleBookmarkClick} style={{ cursor: "pointer" }}>
+                    {saved ? <CiBookmarkCheck /> : <CiBookmark />}
+                </div>
+            </div>
+        </div>
+    );
+};
             <div className="flex justify-between items-center">
               <h3 className="text-sm font-semibold">Beyond Earth</h3>
               <h1 className="px-2 py-1 opacity-50  bg-[Dark Blue] rounded text-sm">PG</h1>
@@ -38,4 +78,4 @@ const Trending = () => {
     )
 }
 
-export default Trending
+export default Trending;
