@@ -12,10 +12,14 @@ function App() {
 
   return (
     <>
+    <div className='bg-[#000000] '>
       <Sidebar />
       <Search />
       <Trending />
       <Recommended />
+
+      </div>
+
     </>
   )
 }
