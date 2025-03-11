@@ -2,7 +2,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const Search = () => {
     return (
-        <div className="flex bg-[#000000] gap-4 items-center ">
+        <div className="flex p-4 bg-[#000000] gap-4 items-center ">
             <div>
             <IoSearchOutline className="text-white" />
             </div>

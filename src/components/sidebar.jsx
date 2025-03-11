@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 
 const Sidebar = ({ setPage }) => {
     return (
-        <header className="flex justify-between bg-[#161D2F] px-3 py-5 mb-6">
+        <header  className=" flex justify-between items-center bg-[#161D2F] px-3 py-5 mb-6">
             <div>
                 <button onClick={() => navigate("/", setPage)}>
                     <MdMovie className="w-[25px] h-[20px] text-[#FC4747]" />
