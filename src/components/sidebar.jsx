@@ -7,7 +7,7 @@ import profileImage from "../image/user.svg"
 
 const Sidebar = () => {
     return (
-        <header >
+        <header>
             <div>
                 <a href=""><MdMovie /></a>
             </div>
