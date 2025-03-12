@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
+import img from "../image/Rectangle.png"
 import { CiBookmark, CiBookmarkCheck } from "react-icons/ci";
 
 const Trending = ({ addBookmark }) => {
@@ -21,8 +22,7 @@ const Trending = ({ addBookmark }) => {
             console.log("Beyond Earth kayıttan kaldırıldı!");
         }
     };
-import { CiBookmark } from "react-icons/ci";
-import img from "../image/Rectangle.png"
+
     return (
         <div className="px-4" >
             <div className="mb-4" >
@@ -45,27 +45,6 @@ import img from "../image/Rectangle.png"
               <TbMovie />
               <p>Movie</p>
             </div>
-            <div>
-                <img src="" alt="" />
-                <div>
-                    <h3>Beyond Earth</h3>
-                </div>
-                <div>
-                    <p>2019</p>
-                    <FaCircle />
-                    <TbMovie />
-                    <p>Movie</p>
-                </div>
-                <div>
-                    <h1>PG</h1>
-                </div>
-                <div onClick={handleBookmarkClick} style={{ cursor: "pointer" }}>
-                    {saved ? <CiBookmarkCheck /> : <CiBookmark />}
-                </div>
-            </div>
-        </div>
-    );
-};
             <div className="flex justify-between items-center">
               <h3 className="text-sm font-semibold">Beyond Earth</h3>
               <h1 className="px-2 py-1 opacity-50  bg-[Dark Blue] rounded text-sm">PG</h1>
