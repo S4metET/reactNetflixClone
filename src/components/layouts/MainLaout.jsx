@@ -10,15 +10,11 @@ import Loading from "../Loading";
 export default function MainLayout(){
     const [currentPage, setCurrentPage] = useState(window.location.pathname);
     const [isLoading, setIsLoading] = useState(true);
-export default function MainLayout(){
-    const [currentPage, setCurrentPage] = useState(window.location.pathname);
-
 
     const navigate = (path) => {
         window.history.pushState({} , "" , path);
         setCurrentPage(path)
     }
-
     setTimeout(() => {
         setIsLoading(false);
       },1000)
@@ -27,7 +23,6 @@ export default function MainLayout(){
           <Loading />
         )
       }
-
     return(
         <div className="bg-[#000000]">
         
