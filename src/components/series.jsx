@@ -2,8 +2,6 @@ import { CiBookmark } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
 import { useState, useEffect } from "react";
-
-
 const Series = () => {
    const [data, setData] = useState([]);
            const [errMessage, setErrMessage] = useState(null);

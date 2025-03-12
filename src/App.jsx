@@ -1,6 +1,4 @@
-
 function App({children}) {
-  
   return (
     <div>
      {children}
