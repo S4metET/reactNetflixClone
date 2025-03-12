@@ -7,8 +7,6 @@ import "../styles/global.css";
 export default function Trending({ addBookmark }) {
   const [data, setData] = useState([]);
   const [errMessage, setErrMessage] = useState(null);
-  
-
   useEffect(() => {
     const getUsers = async () => {
       try {
@@ -34,9 +32,6 @@ export default function Trending({ addBookmark }) {
       </>
     );
   }
-
-  
-
   return (
     <div>
       <div className="mb-4 px-4">
