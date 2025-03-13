@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
-import { CiBookmark, CiBookmarkCheck } from "react-icons/ci";
 import "../styles/global.css";
+import Bookmark from "./Bookmark";
 
 export default function Trending({ addBookmark }) {
   const [data, setData] = useState([]);
@@ -52,7 +52,7 @@ export default function Trending({ addBookmark }) {
               />
               <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-between p-2 text-white">
                 <div className="flex justify-end">
-                  <CiBookmark className="text-xl w-[32px] h-[32px] p-1 rounded-full cursor-pointer bg-gradient-to-b from-[rgba(0,0,0,0.0001)] to-[rgba(0,0,0,0.75)]" />
+                <Bookmark movie={{id:data.id, date: data.release_date, type:data.type, rating:data.age_rating, title: data.title, image: data.image }} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 opacity-75 text-xs">

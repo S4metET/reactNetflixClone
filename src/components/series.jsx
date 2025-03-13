@@ -2,11 +2,12 @@ import { CiBookmark } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
 import { useState, useEffect } from "react";
-
-
+import Bookmark from "./Bookmark";
+import Loading from "./Loading";
 const Series = () => {
    const [data, setData] = useState([]);
-           const [errMessage, setErrMessage] = useState(null);
+   const [errMessage, setErrMessage] = useState(null);
+   const [isLoading, setIsLoading] = useState(true);
        
             useEffect(() => {
                const getUsers = async () => {
@@ -21,7 +22,12 @@ const Series = () => {
                  } catch (err) {
                    console.log(err);
                    setErrMessage(err.message);
-                 }
+                 }finally{
+                  setTimeout(() => {
+                    setIsLoading(false);
+                  },1000)
+  
+                }
                };
                getUsers();
              }, []);
@@ -33,6 +39,11 @@ const Series = () => {
                  </>
                );
              }
+              if(isLoading){
+                return (
+                 <Loading />
+                 )
+               }
              return (
                <>
                  <div>
@@ -50,7 +61,9 @@ const Series = () => {
                              alt=""
                              className="w-full h-full object-cover rounded-lg"
                            />
-                           <CiBookmark className="absolute top-2 right-2 text-white text-xl w-[25px] h-[25px] p-1 rounded-full cursor-pointer bg-gradient-to-b from-[rgba(0,0,0,0.0001)] to-[rgba(0,0,0,0.75)]" />
+                          <div className="absolute top-2 right-2 text-white text-xl w-[25px] h-[25px] p-1 pr-8 rounded-full cursor-pointer ">
+                             <Bookmark movie={{id:data.id, date: data.release_date, type:data.type, rating:data.age_rating, title: data.title, image: data.image }} />
+                          </div>
                          </div>
              
                          <div className="flex p-0.5 items-center gap-2 opacity-75 text-xs">
