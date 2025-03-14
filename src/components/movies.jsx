@@ -1,4 +1,3 @@
-import { CiBookmark } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa";
 import { TbMovie } from "react-icons/tb";
 import { useState, useEffect } from "react";
@@ -11,7 +10,6 @@ const Movies = ({ data: propData }) => {
   const [searchTerm, setSearchTerm] = useState(""); 
   const [errMessage, setErrMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(!propData);
-
   useEffect(() => {
     if (!propData) {
       const fetchMovies = async () => {

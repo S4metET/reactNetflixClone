@@ -1,5 +1,7 @@
 /* Telefon ve masaüstü dahil tüm ekran boyutlarında şeffaf kaydırma çubuğu */
-
+ body {
+  background-color: black;
+ }
 ::-webkit-scrollbar {
     width: 8px; /* Kaydırma çubuğu genişliği */
   }

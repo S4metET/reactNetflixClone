@@ -91,7 +91,6 @@ export default function MainLayout() {
     <div className="bg-[#000000]">
       <Sidebar navigate={navigate} />
       <div>
-        <Search setSearchTerm={setSearchTerm} />
         <div>
           <App>
             {currentPage === "/" && (
